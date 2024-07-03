@@ -1,3 +1,4 @@
+```sh
 FLAKE="github:rsrohitsingh682/idli#idli"
 DISK_DEVICE=/dev/sda
 sudo nix \
@@ -6,3 +7,4 @@ sudo nix \
     --flake "$FLAKE" \
     --write-efi-boot-entries \
     --disk main "$DISK_DEVICE"
+```

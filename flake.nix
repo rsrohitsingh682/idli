@@ -1,14 +1,10 @@
 {
   inputs = {
-    # Principle inputs (updated by `nix run .#update`)
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
-    systems.url = "github:nix-systems/default";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
-
   };
-
-  outputs = inputs@{ self, nixpkgs, disko, ... }:
+  outputs = { self, nixpkgs, disko, ... }:
     let
       # TODO: Adjust these values to your needs
       system = "x86_64-linux";
